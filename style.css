@@ -1,0 +1,64 @@
+*{
+    font-family: josefin sans;
+    margin: 0;
+}
+
+body{
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.6em;
+}
+
+p{
+    font-size: 1.3em;
+}
+
+.prestation{
+    width: 522px;
+    height: 640px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prestation img{
+    background-color: blue;
+    width: 100%;
+    flex-grow: 8;
+}
+
+.prestation div{
+    padding: 40px;
+    flex-grow: 0.5;
+}
+
+.prestation h4{
+    margin-bottom : 20px;
+}
+
+.fleche{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.carousel-presta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-presta{
+    display: flex;
+    justify-content: center;
+}
+
