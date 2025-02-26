@@ -9,7 +9,7 @@ a{
 }
 
 .gallery-container {
-    width: 100%;
+    width: 70%;
     overflow: hidden;
     position: relative;
 }
@@ -19,8 +19,9 @@ a{
     animation: scrollGallery 10s linear infinite;
 }
 .gallery img {
-    width: 20%; /* Doit correspondre à 100% / nombre d'images */
+    width: 40%; /* Doit correspondre à 100% / nombre d'images */
 }
+
 @keyframes scrollGallery {
     0% { transform: translateX(0); }
     20% { transform: translateX(0); }
