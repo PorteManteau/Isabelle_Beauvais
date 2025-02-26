@@ -1,3 +1,34 @@
 a{
     background-color: aqua;
+    
+}
+
+* {  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.gallery {
+    display: flex;
+    width: 500%; /* Ajuster selon le nombre d'images */
+    animation: scrollGallery 10s linear infinite;
+}
+.gallery img {
+    width: 20%; /* Doit correspondre à 100% / nombre d'images */
+}
+@keyframes scrollGallery {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    45% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    70% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    95% { transform: translateX(-60%); }
+    100% { transform: translateX(-80%); }
 }
