@@ -1,35 +1,44 @@
-a{
-    background-color: aqua;
-    
-}
+    h1 {
+        font-family: "Josefin Sans", sans-serif;
+        margin: 20px 0;
+    }
 
-* {  margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.gallery-container {
-    width: 70%;
-    overflow: hidden;
-    position: relative;
-}
-.gallery {
-    display: flex;
-    width: 500%; /* Ajuster selon le nombre d'images */
-    animation: scrollGallery 10s linear infinite;
-}
-.gallery img {
-    width: 40%; /* Doit correspondre à 100% / nombre d'images */
-}
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background: #f8f8f8;
+        padding: 20px 0;
+    }
 
-@keyframes scrollGallery {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
-    25% { transform: translateX(-20%); }
-    45% { transform: translateX(-20%); }
-    50% { transform: translateX(-40%); }
-    70% { transform: translateX(-40%); }
-    75% { transform: translateX(-60%); }
-    95% { transform: translateX(-60%); }
-    100% { transform: translateX(-80%); }
-}
+    .gallery {
+        display: flex;
+        width: max-content;
+        animation: scrollGallery 35s linear infinite;
+    }
+
+    .gallery img {
+        width: auto;
+        height: 300px;
+        margin: 0 10px;
+    }
+
+    @keyframes scrollGallery {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+
+        /* Pour assurer une boucle fluide */
+    }
