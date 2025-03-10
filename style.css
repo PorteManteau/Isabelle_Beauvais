@@ -41,16 +41,17 @@ a {
 
 /*------Formulaire------*/ 
 
-.Form-Container {
+.Formulaire-Container {
     background-color: #EAE5C8;
     border-radius: 16px;
     padding: 30px;
     width: 600px;
-    text-align: center;
-    margin-top: 3%;
+   margin-top: 3%;
+   align-items: center;
+  justify-content: center;
 }
 
-.Form {
+.Formulaire {
     display: flex;
     flex-direction: column;
     padding: 20;
@@ -72,7 +73,7 @@ textarea {
     resize: none;
 }
 
-.Form-Boutton {
+.Formulaire-Boutton {
     background-color: #FF6F32;
     color: white;
     border: none;
@@ -84,6 +85,6 @@ textarea {
     margin-top: 20px;
 }
 
-.Form-Boutton:hover {
+.Formulaire-Boutton:hover {
     background-color: #e65a24;
 }
