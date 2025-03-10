@@ -1,26 +1,30 @@
-*{
-    font-family: josefin sans;
+* {
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     margin-left: 120px;
     margin-right: 120px;
+    background-color: #f5f5f5;
 }
 
-h3{
+h3 {
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-h4{
+h4 {
     font-size: 1.6em;
 }
 
-p{
+p {
     font-size: 1.3em;
 }
 
-.prestation{
+.prestation {
     width: 522px;
     height: 640px;
     border-radius: 8px;
@@ -28,37 +32,93 @@ p{
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    position: absolute;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0s;
 }
 
-.prestation img{
+.prestation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.prestation img {
     background-color: blue;
     width: 100%;
     flex-grow: 8;
 }
 
-.prestation div{
+.prestation > div > div {
     padding: 40px;
     flex-grow: 0.5;
 }
 
-.prestation h4{
-    margin-bottom : 20px;
+.prestation h4 {
+    margin-bottom: 20px;
 }
 
-.fleche{
+.fleche {
     height: 50px;
     width: 50px;
-    border-radius: 100%;
+    cursor: pointer;;
+    border: none;
 }
 
-.carousel-presta{
+.carousel-presta {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.cards-presta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.cards-presta{
-    display: flex;
-    justify-content: center;
+.active {
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
 }
 
+.inactiveg {
+    z-index: 1;
+    filter: blur(2px);
+}
+
+.inactived {
+    z-index: 1;
+    filter: blur(2px);
+}
+
+.inactive {
+    transform: scale(0.9);
+}
+
+.inactive > div {
+    filter: grayscale(100%) blur(2px);
+    transition: filter 0.5s ease-in-out;
+}
+
+.active > div {
+    transition: filter 0.5s ease-in-out;
+}
+
+.inactive::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
