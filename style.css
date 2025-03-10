@@ -46,9 +46,8 @@ a {
     border-radius: 16px;
     padding: 30px;
     width: 600px;
-   margin-top: 3%;
-   align-items: center;
-  justify-content: center;
+    text-align: center;
+    margin-top: 3%;
 }
 
 .Formulaire {
