@@ -122,3 +122,39 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    padding: 10 2;
+    background-color: #EAE5C8;
+    border-radius: 10px 0px 0px 10px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.social-media a{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.social-media a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.social-media a i{
+    font-size: 2rem;
+}
