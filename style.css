@@ -336,3 +336,92 @@ p {
     .legal-links a:hover {
         text-decoration: underline;
     }
+a {
+    background-color: aqua;
+}
+
+.Avis-Container {
+    display: flex;
+    justify-content: center;
+    gap: 75px; 
+    margin-top: 50px;
+}
+
+.Avis {
+    background-color: #EAE5C8;
+    border-radius: 16px;
+    width: 400px; 
+    padding: 20px 20px 20px; 
+    position: relative;
+}
+
+.Avis-Photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 5%;
+    transform: translateX(-70%);
+}
+
+.Avis p {
+    padding-left: 40px;
+    font-family: "Josefin Sans", serif;
+    font-weight: 300;
+    color: #333;
+}
+.Avis-Signature {
+    text-align: center;
+    font-weight: 400;
+}
+
+
+/*------Formulaire------*/ 
+
+.Formulaire-Container {
+    background-color: #EAE5C8;
+    border-radius: 16px;
+    padding: 30px;
+    width: 600px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.Formulaire {
+    display: flex;
+    flex-direction: column;
+    padding: 20;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    background: white;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.Formulaire-Boutton {
+    background-color: #FF6F32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.Formulaire-Boutton:hover {
+    background-color: #e65a24;
+}
