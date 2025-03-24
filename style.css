@@ -4,6 +4,7 @@
   src:  url('/font/ZT\ Formom\ Italic.woff2') format('woff2'),
         url('/font/festina-lente-regular.woff') format('woff');
 }
+
 *{
   font-family: josefin sans;
   margin :0;
@@ -14,6 +15,7 @@ img{
     position: relative; 
     z-index: 2;
 }
+
 a{
   display: flex;
   font-family: josefin sans;
@@ -27,6 +29,7 @@ a{
   
 
 }
+
 ul {
   display: flex;
   justify-content: space-between;
@@ -34,7 +37,7 @@ ul {
   margin: 0;
   margin-top: 2%;
   padding: 0;
-  }
+}
 
 
 p{
@@ -94,3 +97,161 @@ blockquote{
  
 }
 
+* {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+.prestation {
+    width: 522px;
+    height: 640px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    position: absolute;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0s;
+}
+
+.prestation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.prestation img {
+    background-color: blue;
+    width: 100%;
+    flex-grow: 8;
+}
+
+.prestation > div > div {
+    padding: 40px;
+    flex-grow: 0.5;
+}
+
+.prestation h4 {
+    margin-bottom: 20px;
+}
+
+.fleche {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;;
+    border: none;
+}
+
+.carousel-presta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.cards-presta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+}
+
+.inactiveg {
+    z-index: 1;
+    filter: blur(2px);
+}
+
+.inactived {
+    z-index: 1;
+    filter: blur(2px);
+}
+
+.inactive {
+    transform: scale(0.9);
+}
+
+.inactive > div {
+    filter: grayscale(100%) blur(2px);
+    transition: filter 0.5s ease-in-out;
+}
+
+.active > div {
+    transition: filter 0.5s ease-in-out;
+}
+
+.inactive::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    padding: 10px 2px;
+    background-color: #EAE5C8;
+    border-radius: 10px 0px 0px 10px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.social-media a{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.social-media a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.social-media a i{
+    font-size: 2rem;
+}
