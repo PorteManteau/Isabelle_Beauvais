@@ -15,51 +15,106 @@ body {
     background-color: #f5f5f5;
 }
 
-img {
-    width: 12%;
+.content-wrapper {
+    max-width: calc(100% - 100px);
     position: relative;
-    z-index: 2;
+    margin: 0px 50px;
 }
 
-a {
+header {
     display: flex;
-    font-family: "Josefin Sans", sans-serif;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 150%;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    position: absolute;
     z-index: 2;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
 }
 
 ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0px 80px;
-    margin-top: 2%;
     padding: 0;
 }
 
-p {
-    text-align: left;
-    font-family: "Della Respira", serif;
-    font-size: 1.3em;
+li img {
+    width: 5rem;
+}
+
+a {
+    display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 150%;
+    position: relative;
+}
+
+.accueil {
+    background-image: url("media/peche.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 30%),
+                linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 h1 {
-    margin-top: 300px;
-    margin-right: 700px;
-    color: #ffffff;
-    font-size: 300%;
-    position: relative;
-    z-index: 2;
+    color: #f5f5f5;
+    font-size: 7rem;
+    position: absolute;
     font-family: "festina";
+    font-weight: 400;
+    padding-left: 80px;
+    bottom: 80px;
+}
+
+.description {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description img {
+    width: 30%;
+}
+
+.description div {
+    width: 40%;
+}
+
+.description div p{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+h2{
+    font-family: "festina";
+    font-weight: 400;
+    font-size: 3rem;
 }
 
 h3 {
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 4rem;
 }
 
 h4 {
@@ -67,38 +122,9 @@ h4 {
     margin-bottom: 20px;
 }
 
-blockquote {
+p {
     text-align: left;
-    font-family: "Della Respira", serif;
-    font-size: 150%;
-}
-
-.Isabelle {
-    position: absolute;
-    right: 0;
-    width: 20%;
-}
-
-.acceuil {
-    background-image: url("media/peche.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.acceuil::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.7) 100%);
+    font-size: 1.3em;
 }
 
 .prestation {
@@ -124,7 +150,10 @@ blockquote {
 .prestation img {
     background-color: blue;
     width: 100%;
-    flex-grow: 8;
+    max-height: 60%;
+    object-fit: cover;
+    position: relative;
+    object-position: 0% 15%;
 }
 
 .prestation > div > div {
@@ -228,6 +257,7 @@ blockquote {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 320px; /* Adjusted height */
     overflow: hidden;
     position: relative;
     background: #f8f8f8;
@@ -236,14 +266,16 @@ blockquote {
 
 .gallery {
     display: flex;
-    width: max-content;
     animation: scrollGallery 35s linear infinite;
+    width: calc(2 * 100%);
 }
 
 .gallery img {
+    height: 300px; /* Adjusted height */
     width: auto;
-    height: 300px;
     margin: 0 10px;
+    flex-shrink: 0;
+    object-fit: contain; /* Ensure consistent display */
 }
 
 @keyframes scrollGallery {
@@ -260,10 +292,15 @@ footer {
     color: black;
     text-align: center;
     padding: 20px 0;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-icons {
     margin: 10px 0;
+    display: flex;
 }
 
 .icon {
@@ -275,6 +312,7 @@ footer {
 
 .legal-links {
     margin-top: 10px;
+    display: flex;
 }
 
 .legal-links a {
@@ -292,7 +330,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 75px;
-    margin-top: 50px;
+    margin-top: 4rem;
 }
 
 .Avis {
@@ -369,4 +407,13 @@ textarea {
 
 .Formulaire-Boutton:hover {
     background-color: #e65a24;
+}
+
+.formulaire-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
 }
