@@ -4,6 +4,10 @@
              url('/font/festina-lente-regular.woff') format('woff');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: "Josefin Sans", sans-serif;
     margin: 0;
@@ -150,7 +154,7 @@ p {
 .prestation img {
     background-color: blue;
     width: 100%;
-    max-height: 60%;
+    height: 60%;
     object-fit: cover;
     position: relative;
     object-position: 0% 15%;
@@ -230,6 +234,7 @@ p {
     top: 30%;
     right: 0;
     z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-media a {
@@ -328,16 +333,25 @@ footer {
 .Avis-Container {
     display: flex;
     justify-content: center;
+    align-items: stretch ;
     gap: 75px;
     margin-top: 4rem;
+    
 }
 
 .Avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: #EAE5C8;
     border-radius: 16px;
     width: 400px;
-    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    height: calc(100% + 50px);
+    padding-left: 70px;
 }
 
 .Avis-Photo {
@@ -345,21 +359,16 @@ footer {
     width: 100px;
     border-radius: 50%;
     position: absolute;
+    object-fit: cover;
     top: -40px;
-    left: 5%;
-    transform: translateX(-70%);
-}
+    left: -12%;
 
-.Avis p {
-    padding-left: 40px;
-    font-family: "Josefin Sans", serif;
-    font-weight: 300;
-    color: #333;
 }
 
 .Avis-Signature {
-    text-align: center;
-    font-weight: 400;
+    margin-top: 20px;
+    font-style: italic;
+    align-self: flex-end;
 }
 
 .Formulaire-Container {
@@ -369,12 +378,14 @@ footer {
     width: 600px;
     text-align: center;
     margin-top: 3%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .Formulaire {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    
 }
 
 input, textarea {
@@ -409,10 +420,150 @@ textarea {
 }
 
 .formulaire-wrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 5rem;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+        padding-left: 40px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    header {
+        padding: 20px 40px;
+    }
+
+    .cards-presta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .fleche {
+        display: none;
+    }
+
+    .prestation{
+        height: 640px;
+        width: 100%;
+        position: relative;
+    }
+
+    .inactive{
+        filter : blur(0px);
+        transform: translateX(0) !important;
+    }
+
+    .inactive::after {
+        display: none;
+    }
+
+    .prestation > div {
+        filter : none;
+    }
+
+    .carousel-presta {
+        height: 100%;
+    }
+
+    .description img {
+        width: 50%;
+    }
+
+    .Avis-Container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulaire-wrapper{
+        margin-top: 1rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+
+    body{
+        font-size: 0.8rem;
+    }
+    .cards-presta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        padding-left: 20px;
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .description{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .description div{
+        width: 100%;
+    }
+
+    .description div p {
+        margin-left: 0px;
+    }
+
+    .description img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .Formulaire-Container {
+        width: 90%;
+    }
+
+    .content-wrapper {
+        max-width: 100%;
+        margin: 0px 20px;
+    }
+
+    .Avis {
+        width: 90%;
+    }
+
+    .social-media{
+        top: 0;
+        right: calc(50% - 75px);
+        flex-direction: row;
+        border-radius: 0px 0px 10px 10px;
+        padding: 0;
+        width: auto;
+    }
+
+    header{
+        padding: 10px 20px;
+    }
+
+    .prestation{
+        height: 100%;
+    }
+
+    .prestation img{
+        max-height: 300px ;
+    }
+    .prestation>div>div {
+        padding: 20px;
+    }
+
+    .Avis-Photo{
+        left : -8%;
+    }
+  }
