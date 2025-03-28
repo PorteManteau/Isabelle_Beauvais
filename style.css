@@ -43,7 +43,7 @@ ul {
 }
 
 li img {
-    width: 5rem;
+    width: 3rem;
 }
 
 a {
@@ -226,7 +226,7 @@ p {
     padding: 10px 2px;
     background-color: #EAE5C8;
     border-radius: 10px 0px 0px 10px;
-    position: absolute;
+    position: fixed;
     top: 30%;
     right: 0;
     z-index: 2;
@@ -260,7 +260,6 @@ p {
     height: 320px; /* Adjusted height */
     overflow: hidden;
     position: relative;
-    background: #f8f8f8;
     padding: 20px 0;
 }
 
